@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcm7sy62ehgau"]
+
+[ext_resource type="Texture2D" uid="uid://dke41aexe3dkd" path="res://00fd3a8d54e7d809c374d61ead18af951a43cac6.jpg" id="1_ihesg"]
+[ext_resource type="Script" path="res://quit.gd" id="2_y6r3a"]
+[ext_resource type="Script" path="res://play.gd" id="3_lh74e"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+zoom = Vector2(1.1, 1.1)
+
+[node name="00Fd3a8d54e7d809c374d61Ead18Af951a43Cac6" type="Sprite2D" parent="."]
+position = Vector2(564.6, 327.5)
+scale = Vector2(0.639048, 0.639048)
+texture = ExtResource("1_ihesg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 121.0
+offset_top = 87.0
+offset_right = 1045.0
+offset_bottom = 307.0
+theme_override_colors/font_color = Color(0.313726, 0.470588, 0.466667, 0.376471)
+theme_override_font_sizes/font_size = 60
+text = "Spookers size test and buildings"
+horizontal_alignment = 1
+
+[node name="quit" type="Button" parent="."]
+offset_left = 389.0
+offset_top = 404.0
+offset_right = 751.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 60
+text = "Выход
+"
+flat = true
+script = ExtResource("2_y6r3a")
+
+[node name="play" type="Button" parent="."]
+offset_left = 389.0
+offset_top = 192.0
+offset_right = 751.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 60
+text = "Начать
+"
+flat = true
+script = ExtResource("3_lh74e")
+
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]
+[connection signal="pressed" from="play" to="play" method="_on_pressed"]

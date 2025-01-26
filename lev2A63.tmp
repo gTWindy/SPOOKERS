@@ -1,0 +1,109 @@
+[gd_scene load_steps=12 format=3 uid="uid://caj0mrp3woq2n"]
+
+[ext_resource type="Texture2D" uid="uid://drtjpjcr6vjhn" path="res://i0NBUQ5XtyU (1) (1).jpg" id="1_iq8qr"]
+[ext_resource type="PackedScene" uid="uid://bhjbjwvfvrj4h" path="res://node_3d.tscn" id="2_qrjut"]
+[ext_resource type="Texture2D" uid="uid://bdfxbuxtu72t0" path="res://123123123.jpg" id="3_i0oa3"]
+[ext_resource type="PackedScene" uid="uid://bdhwfmsivnpc8" path="res://lowpoly_pixelart_car.glb" id="4_6hg6v"]
+[ext_resource type="Script" path="res://lowpoly_pixelart_car.gd" id="5_1hfq7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_biim5"]
+sky_top_color = Color(0.232, 0.3664, 0.4, 1)
+sky_horizon_color = Color(0.608, 0.63385, 0.63325, 1)
+ground_horizon_color = Color(0.608, 0.63385, 0.63325, 1)
+
+[sub_resource type="Sky" id="Sky_m6vhf"]
+sky_material = SubResource("ProceduralSkyMaterial_biim5")
+
+[sub_resource type="Environment" id="Environment_gtq2x"]
+background_mode = 2
+sky = SubResource("Sky_m6vhf")
+sdfgi_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t32tg"]
+albedo_texture = ExtResource("1_iq8qr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gumqv"]
+albedo_texture = ExtResource("3_i0oa3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40bst"]
+
+[node name="level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gtq2x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.782608, -0.622515, -2.7211e-08, 0, -4.37114e-08, 1, -0.622515, 0.782608, 3.42089e-08, 0, 0, 0)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="Road" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Node3D" parent="." instance=ExtResource("2_qrjut")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.12367, 1.00481, -0.115858)
+
+[node name="Road2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road4" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road5" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.5, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road6" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road7" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Crossroad" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_gumqv")
+use_collision = true
+size = Vector3(5, 0.01, 5)
+
+[node name="Crossroad2" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_gumqv")
+use_collision = true
+size = Vector3(5, 0.01, 5)
+
+[node name="Car" parent="." instance=ExtResource("4_6hg6v")]
+transform = Transform3D(0.44743, 0, -0.471493, 0, 0.65, 0, 0.471493, 0, 0.44743, 20.1204, 0.25818, 31.9769)
+script = ExtResource("5_1hfq7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car"]
+transform = Transform3D(2.875, 0, -2.38419e-07, 0, 4.2, 0, 1.19209e-07, 0, 5, 0.169479, 0, 0.160831)
+shape = SubResource("BoxShape3D_40bst")

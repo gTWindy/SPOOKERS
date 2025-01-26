@@ -1,0 +1,743 @@
+[gd_scene load_steps=48 format=3 uid="uid://caj0mrp3woq2n"]
+
+[ext_resource type="Texture2D" uid="uid://drtjpjcr6vjhn" path="res://i0NBUQ5XtyU (1) (1).jpg" id="1_iq8qr"]
+[ext_resource type="PackedScene" uid="uid://bhjbjwvfvrj4h" path="res://node_3d.tscn" id="2_qrjut"]
+[ext_resource type="Texture2D" uid="uid://bdfxbuxtu72t0" path="res://123123123.jpg" id="3_i0oa3"]
+[ext_resource type="PackedScene" uid="uid://bdhwfmsivnpc8" path="res://lowpoly_pixelart_car.glb" id="4_6hg6v"]
+[ext_resource type="Script" path="res://lowpoly_pixelart_car.gd" id="5_1hfq7"]
+[ext_resource type="Texture2D" uid="uid://dnr3dyh2m73cw" path="res://Brick Wall (2).png" id="6_ffa4i"]
+[ext_resource type="PackedScene" uid="uid://bpvkvt7nqhcqg" path="res://trash_can_minecraft.glb" id="7_8s0ts"]
+[ext_resource type="Texture2D" uid="uid://u1s1sb30gqo6" path="res://7eb9b0c67eac4221f07593de1388fe25 (1).jpg" id="7_gsyvy"]
+[ext_resource type="Texture2D" uid="uid://g5x2vckp7xbv" path="res://bbad1215a10582e74f22efd53999bc7b (1) (2).jpg" id="8_5umho"]
+[ext_resource type="Texture2D" uid="uid://hqthwhopv1qu" path="res://wall-with-multiple-doors-worn-diffuse (3).jpg" id="9_n4j76"]
+[ext_resource type="PackedScene" uid="uid://ctulubdsouta1" path="res://hand_painted_pixel_flowers.glb" id="10_whx10"]
+[ext_resource type="PackedScene" uid="uid://cx2c6l2ao6q51" path="res://bench_minecraft.glb" id="11_3ort7"]
+[ext_resource type="Texture2D" uid="uid://fdtm2yx7rwug" path="res://1627398148_13-kartinkin-com-p-tekstura-razrushennogo-zdaniya-krasivo-17 (1).jpg" id="12_2mbcs"]
+[ext_resource type="Texture2D" uid="uid://c37yxo0x84ihd" path="res://city_windows_house_building_bric (1) (1).jpg" id="13_nl5l4"]
+[ext_resource type="Texture2D" uid="uid://b2qe8ure4ouow" path="res://spiderweek-21-01-2025 (2) (1).png" id="14_hi03c"]
+[ext_resource type="Texture2D" uid="uid://bvsqcmg5knx6l" path="res://1376819316_1104826720 (1) (1).jpg" id="15_7pokc"]
+[ext_resource type="Texture2D" uid="uid://mbywvqe7kd8x" path="res://c4ea12c0bb05b405b71df9e991031e9b_1.png" id="16_lgu7j"]
+[ext_resource type="Texture2D" uid="uid://ic3wnod7bydp" path="res://Sperm.png" id="17_wiqdq"]
+[ext_resource type="Texture2D" uid="uid://bdr31tsa7smw4" path="res://los-angeles-png-photos (1).png" id="18_b50dr"]
+[ext_resource type="Texture2D" uid="uid://dhrykbpqlnk0x" path="res://0f5e99db6ee2f2ddd149c9bd67b71343 (1).jpg" id="20_hef0l"]
+[ext_resource type="Texture2D" uid="uid://bq6d10333616i" path="res://hqdefault (1).jpg" id="21_qgbbn"]
+[ext_resource type="Texture2D" uid="uid://clk8hppfrcdl4" path="res://BuildingsDerelict0094_350 (1).jpg" id="21_w7ls6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sp0q0"]
+sky_top_color = Color(0.959012, 0.914856, 0.862525, 0)
+sky_horizon_color = Color(0.764756, 0.741952, 0.719435, 0.75)
+sky_energy_multiplier = 1.1
+ground_bottom_color = Color(0.100013, 0.0529529, 0.0152173, 1)
+ground_horizon_color = Color(0.764756, 0.741952, 0.719435, 0.75)
+
+[sub_resource type="Sky" id="Sky_7vac0"]
+sky_material = SubResource("ProceduralSkyMaterial_sp0q0")
+
+[sub_resource type="Environment" id="Environment_o12of"]
+background_mode = 2
+sky = SubResource("Sky_7vac0")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t32tg"]
+albedo_texture = ExtResource("1_iq8qr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gumqv"]
+albedo_texture = ExtResource("3_i0oa3")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nrxnc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40bst"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u536l"]
+albedo_texture = ExtResource("6_ffa4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63f5b"]
+albedo_texture = ExtResource("7_gsyvy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16tb3"]
+size = Vector3(1, 1.72476, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2psbm"]
+albedo_texture = ExtResource("8_5umho")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xswu"]
+albedo_texture = ExtResource("9_n4j76")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iq6mi"]
+size = Vector3(2.42236, 1.52441, 1.02615)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wd50"]
+albedo_texture = ExtResource("12_2mbcs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xroiq"]
+albedo_texture = ExtResource("12_2mbcs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eokba"]
+albedo_texture = ExtResource("13_nl5l4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nr63"]
+blend_mode = 1
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.67, 0.67, 0.67, 0)
+albedo_texture = ExtResource("14_hi03c")
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v4sy"]
+albedo_texture = ExtResource("15_7pokc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h315a"]
+blend_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("16_lgu7j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxrnm"]
+albedo_texture = ExtResource("17_wiqdq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmilh"]
+transparency = 1
+albedo_texture = ExtResource("18_b50dr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6iyqa"]
+albedo_texture = ExtResource("7_gsyvy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nri02"]
+albedo_texture = ExtResource("20_hef0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4e1n"]
+albedo_texture = ExtResource("21_qgbbn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxxar"]
+albedo_texture = ExtResource("21_w7ls6")
+
+[node name="level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o12of")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.865788, -0.499863, 0.0234195, -0.481105, 0.818599, -0.313741, 0.137656, -0.2829, -0.94922, 7.05201, 4685.76, -961.78)
+light_color = Color(0.878431, 0.701961, 0.368627, 1)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="Road" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Node3D" parent="." instance=ExtResource("2_qrjut")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.12367, 1.00481, -0.115858)
+
+[node name="Road2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road4" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road5" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.5, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road6" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road7" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Crossroad" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_gumqv")
+use_collision = true
+size = Vector3(5, 0.01, 5)
+
+[node name="Crossroad2" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_gumqv")
+use_collision = true
+size = Vector3(5, 0.01, 5)
+
+[node name="Car" parent="." instance=ExtResource("4_6hg6v")]
+transform = Transform3D(0.44743, 0, -0.471493, 0, 0.65, 0, 0.471493, 0, 0.44743, 20.1204, 0.25818, 31.9769)
+script = ExtResource("5_1hfq7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Car"]
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_nrxnc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/StaticBody3D"]
+transform = Transform3D(2.875, 0, -1.90735e-06, 0, 4.2, 0, 1.19209e-07, 0, 2.2, -0.0980148, -0.154596, -0.157276)
+shape = SubResource("BoxShape3D_40bst")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Car/StaticBody3D"]
+transform = Transform3D(2.875, 0, -2.38419e-07, 0, 2.2, 0, 1.19209e-07, 0, 5, -0.0420685, 0, -0.0399208)
+shape = SubResource("BoxShape3D_40bst")
+
+[node name="Big Brick House Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 2.5, 12.5, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall2" type="CSGBox3D" parent="Big Brick House Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53674e-07, -10, 0)
+material_override = SubResource("StandardMaterial3D_63f5b")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall3" type="CSGBox3D" parent="Big Brick House Wall"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -5, -15, -9.53674e-07)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall4" type="CSGBox3D" parent="Big Brick House Wall"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, -10, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall5" type="CSGBox3D" parent="Big Brick House Wall"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, 8.74228e-07, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall6" type="CSGBox3D" parent="Big Brick House Wall"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -5, 5, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("7_8s0ts")]
+transform = Transform3D(0.643395, 0, -0.275759, 0, 0.7, 0, 0.275759, 0, 0.643395, 0.846, 0, -4.40201)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene"]
+transform = Transform3D(2.1, 0, 0, 0, 3.1, 0, 0, 0, 2.1, 0.00111485, 0, -0.0308924)
+disable_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.20315, 0.0174789, 0.243434)
+shape = SubResource("BoxShape3D_16tb3")
+
+[node name="Wall no way" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 1.5, -4.97)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="House wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 3.82137e-15, 3.82137e-15, 4.37114e-08, -1, 0, 1, 4.37114e-08, -2.5, 10, 30)
+material_override = SubResource("StandardMaterial3D_3xswu")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="House wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -12.5, 10, 20)
+material_override = SubResource("StandardMaterial3D_3xswu")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="Wall no way2" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 4.37114e-08, -4.37114e-08, 1.91069e-15, -1, -8.74228e-08, -1, 1.91069e-15, -11.075, 1.5, 17.5)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("10_whx10")]
+transform = Transform3D(1.6423, 0, -1.14143, 0, 2, 0, 1.14143, 0, 1.6423, -10.2362, -0.01, 19.1849)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("11_3ort7")]
+transform = Transform3D(0.0102902, 0, 0.87994, 0, 0.88, 0, -0.87994, 0, 0.0102902, -2.35999, 0.005, 11.134)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.512332, 0.691096, 0.561692)
+shape = SubResource("BoxShape3D_iq6mi")
+
+[node name="Wall no way3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.99999, 0.00446804, -1.95304e-10, 0, -4.37114e-08, -1, -0.00446804, -0.99999, 4.3711e-08, 2.5, 1.5, 17.5)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Abadoned wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 2.5, 3.5, 25)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall2" type="CSGBox3D" parent="Abadoned wall"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -5, -5, -2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall3" type="CSGBox3D" parent="Abadoned wall"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 4.37114e-08, -1, -5, 5, 2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall4" type="CSGBox3D" parent="Abadoned wall"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, 1.90735e-06, 0)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Industrial wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 3.82137e-15, 3.82137e-15, 4.37114e-08, -1, 0, 1, 4.37114e-08, -2.5, 6, 5.021)
+material_override = SubResource("StandardMaterial3D_eokba")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 12)
+
+[node name="Industrial wall2" type="CSGBox3D" parent="Industrial wall"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -10, 9.979, 4.76837e-07)
+material_override = SubResource("StandardMaterial3D_eokba")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 12)
+
+[node name="Wall no way4" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 15, 1.5, 30)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Wall no way5" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 20, 1.5, 30)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Graffiti" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.16917e-08, -0.953796, 0.300456, -1.31334e-08, -0.300456, -0.953796, 1, -4.37114e-08, 1.91069e-15, 14.2614, 1.76344, 30.024)
+material_override = SubResource("StandardMaterial3D_0nr63")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 2, 1)
+
+[node name="Graffiti2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.16336e-08, -0.952465, -0.304648, 1.33166e-08, 0.304648, -0.952465, 1, -4.37114e-08, 2.65024e-15, 16.5083, 1.76344, 30.024)
+material_override = SubResource("StandardMaterial3D_5v4sy")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 1.085, 1.5)
+
+[node name="Graffiti3" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.36717e-08, -0.999094, -0.0425734, 1.86088e-09, 0.0425734, -0.999094, 1, -4.37114e-08, 1.12002e-15, -6.8763, 4.0593, 15.001)
+material_override = SubResource("StandardMaterial3D_h315a")
+lod_bias = 0.001
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 3.87561, 1.42627)
+
+[node name="Graffiti4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.126753, -0.991935, 0, 0.991935, -0.126753, -11.07, 2.17951, 15.9036)
+material_override = SubResource("StandardMaterial3D_hxrnm")
+lod_bias = 0.001
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 0.527557, 0.511948)
+
+[node name="Road8" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 27.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road9" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 22.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road10" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road11" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.5, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Abadoned wall5" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 22.5, 3.5, 25)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall6" type="CSGBox3D" parent="Abadoned wall5"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -5, -5, -2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall7" type="CSGBox3D" parent="Abadoned wall5"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 4.37114e-08, -1, -5, 5, 2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall8" type="CSGBox3D" parent="Abadoned wall5"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, 9.53674e-07, 0)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Road12" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.5, 0, 17.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Sky wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 3.82137e-15, 3.82137e-15, 4.37114e-08, -1, 0, 1, 4.37114e-08, -110, 45, 250)
+material_override = SubResource("StandardMaterial3D_lmilh")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 273.499, 90.8057)
+
+[node name="Sky wall2" type="CSGBox3D" parent="Sky wall"]
+transform = Transform3D(1, 0, -7.30144e-30, 0, 1, 0, 0, 0, 1, 0, -273.5, -1.14441e-05)
+material_override = SubResource("StandardMaterial3D_lmilh")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 273.499, 90.8057)
+
+[node name="Sky wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 26.7, 45, -160)
+material_override = SubResource("StandardMaterial3D_lmilh")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 273.499, 90.8057)
+
+[node name="Sky wall2" type="CSGBox3D" parent="Sky wall2"]
+transform = Transform3D(1, 0, -7.30144e-30, 0, 1, 0, 0, 0, 1, 0, -273.5, -1.14441e-05)
+material_override = SubResource("StandardMaterial3D_lmilh")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 273.499, 90.8057)
+
+[node name="Abadoned wall6" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 9.82825, 3.5, -13.9347)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall6" type="CSGBox3D" parent="Abadoned wall6"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -5, -5, -2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall7" type="CSGBox3D" parent="Abadoned wall6"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 4.37114e-08, -1, -5, 5, 2.38419e-07)
+material_override = SubResource("StandardMaterial3D_xroiq")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Abadoned wall8" type="CSGBox3D" parent="Abadoned wall6"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, 9.53674e-07, 0)
+material_override = SubResource("StandardMaterial3D_5wd50")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 7)
+
+[node name="Roof Bricks2" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.5, 25, 0)
+material_override = SubResource("StandardMaterial3D_6iyqa")
+use_collision = true
+size = Vector3(9.98828, 0.01, 10)
+
+[node name="Roof Bricks" type="CSGBox3D" parent="Roof Bricks2"]
+physics_interpolation_mode = 1
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 0, -4.76837e-07)
+material_override = SubResource("StandardMaterial3D_6iyqa")
+use_collision = true
+size = Vector3(9.98828, 0.01, 10)
+
+[node name="Big Brick House Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, -24.4202, 12.5, -10.9246)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall2" type="CSGBox3D" parent="Big Brick House Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53674e-07, -10, 0)
+material_override = SubResource("StandardMaterial3D_63f5b")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall3" type="CSGBox3D" parent="Big Brick House Wall2"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -5, -15, -9.53674e-07)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall4" type="CSGBox3D" parent="Big Brick House Wall2"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, -10, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall5" type="CSGBox3D" parent="Big Brick House Wall2"]
+transform = Transform3D(1, -1.74846e-07, -3.82137e-15, -1.74846e-07, -1, 0, -3.82138e-15, 0, -1, -10, 8.74228e-07, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Big Brick House Wall6" type="CSGBox3D" parent="Big Brick House Wall2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -5, 5, 0)
+material_override = SubResource("StandardMaterial3D_u536l")
+snap = 1e-06
+use_collision = true
+size = Vector3(0.01, 10, 25)
+
+[node name="Roof Bricks3" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.42, 25, -10.93)
+material_override = SubResource("StandardMaterial3D_6iyqa")
+use_collision = true
+size = Vector3(9.98828, 0.01, 10)
+
+[node name="Roof Bricks" type="CSGBox3D" parent="Roof Bricks3"]
+physics_interpolation_mode = 1
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 0, -4.76837e-07)
+material_override = SubResource("StandardMaterial3D_6iyqa")
+use_collision = true
+size = Vector3(9.98828, 0.01, 10)
+
+[node name="Roof Abadoned" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.5, 7, 25)
+material_override = SubResource("StandardMaterial3D_nri02")
+use_collision = true
+size = Vector3(10.002, 0.01, 10)
+
+[node name="Roof Abadoned2" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-0.00301553, 0.107957, 0.994151, -0.99961, -0.0279217, 0, 0.0277584, -0.993763, 0.108, 17.3761, 13.0677, 18.066)
+material_override = SubResource("StandardMaterial3D_s4e1n")
+use_collision = true
+size = Vector3(10.002, 0.01, 10)
+
+[node name="Abadoned building background" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 3.82137e-15, 3.82137e-15, 4.37114e-08, -1, 0, 1, 4.37114e-08, 42.5, 10, -1.983)
+material_override = SubResource("StandardMaterial3D_gxxar")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="Abadoned wall3" type="CSGBox3D" parent="Abadoned building background"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -10, 10, 9.53674e-07)
+material_override = SubResource("StandardMaterial3D_3xswu")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="Abadoned wall4" type="CSGBox3D" parent="Abadoned building background"]
+transform = Transform3D(-1, 8.74228e-08, -7.64274e-15, -8.74228e-08, -1, -1.06581e-14, -7.64274e-15, -1.06581e-14, 1, -20, 0, 0)
+material_override = SubResource("StandardMaterial3D_3xswu")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="Abadoned wall5" type="CSGBox3D" parent="Abadoned building background"]
+transform = Transform3D(1.31134e-07, 1, -4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -10, -10, 9.53674e-07)
+material_override = SubResource("StandardMaterial3D_3xswu")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 20, 20)
+
+[node name="Wall no way6" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 15, 1.5, 15)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Wall no way7" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 20, 1.5, 15)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Wall no way8" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.994783, -0.102011, 4.45905e-09, 0, -4.37114e-08, -1, 0.102011, -0.994783, 4.34834e-08, 22.5, 1.5, 32.5194)
+material_override = SubResource("StandardMaterial3D_2psbm")
+snap = 1e-06
+use_collision = true
+flip_faces = true
+size = Vector3(0.01, 5, 3)
+
+[node name="Road13" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.5, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road14" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 35, 0, 32.5)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road15" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 12.4989)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road16" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 7.49891)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road17" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 2.49891)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road18" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, -2.49122)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road19" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, -7.49122)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
+
+[node name="Road20" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, -12.4912)
+material_override = SubResource("StandardMaterial3D_t32tg")
+use_collision = true
+size = Vector3(5, 0.01, 10)
