@@ -19,6 +19,7 @@ script = ExtResource("1_18j66")
 shape = SubResource("CapsuleShape3D_dgmh2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_a03ft")
 
 [node name="Head" type="Node3D" parent="."]
