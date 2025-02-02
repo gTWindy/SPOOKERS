@@ -1,13 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhjbjwvfvrj4h"]
+[gd_scene load_steps=12 format=3 uid="uid://bhjbjwvfvrj4h"]
 
 [ext_resource type="Script" path="res://node_3d.gd" id="1_18j66"]
 [ext_resource type="Script" path="res://head.gd" id="2_3md2n"]
 [ext_resource type="Script" path="res://camera_3d.gd" id="3_ibhtj"]
 [ext_resource type="Texture2D" uid="uid://b34tm7d36m777" path="res://Katana.png" id="3_y6ti0"]
+[ext_resource type="Shader" path="res://psx_camera_shader.gdshader" id="5_2gjk3"]
+[ext_resource type="PackedScene" uid="uid://bc3npmllto03i" path="res://Weapons/Colt/PSX_Old_Colt_Revolver_38.glb" id="5_qxb2a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dgmh2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a03ft"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrv26"]
+render_priority = 0
+shader = ExtResource("5_2gjk3")
+shader_parameter/enable_fog = true
+shader_parameter/fog_color = Color(0.19, 0.19, 0.19, 1)
+shader_parameter/noise_color = Color(0, 0, 0, 1)
+shader_parameter/fog_distance = 200.0
+shader_parameter/fog_fade_range = 236.308
+shader_parameter/enable_noise = true
+shader_parameter/noise_time_fac = 10.0
+shader_parameter/enable_color_limitation = true
+shader_parameter/color_levels = 64
+shader_parameter/enable_dithering = true
+shader_parameter/dither_strength = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_07fqb"]
+material = SubResource("ShaderMaterial_hrv26")
+flip_faces = true
+size = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxmkg"]
 transparency = 1
@@ -20,7 +42,6 @@ script = ExtResource("1_18j66")
 shape = SubResource("CapsuleShape3D_dgmh2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("CapsuleMesh_a03ft")
 
 [node name="Head" type="Node3D" parent="."]
@@ -32,8 +53,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19, 0)
 current = true
 script = ExtResource("3_ibhtj")
 
-[node name="Katana" type="CSGBox3D" parent="Head/Camera3D"]
-transform = Transform3D(-0.79653, -0.136005, -0.589103, -8.51821e-08, -0.97437, 0.224951, -0.604599, 0.17918, 0.776115, 0.394712, -0.0448697, -0.655113)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.777635)
+transparency = 0.05
+mesh = SubResource("QuadMesh_07fqb")
+
+[node name="Colt" parent="Head" instance=ExtResource("5_qxb2a")]
+transform = Transform3D(-1.69474, -0.127123, 0.0411296, -0.11773, 1.66824, 0.305149, -0.06318, 0.301357, -1.67188, 0.281388, -0.00396037, -0.379808)
+
+[node name="Katana" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.79653, -0.136005, -0.589103, -8.51821e-08, -0.97437, 0.224951, -0.604599, 0.17918, 0.776115, 2.71875, 0.686634, -0.655113)
 material_override = SubResource("StandardMaterial3D_dxmkg")
 transparency = 0.01
 flip_faces = true

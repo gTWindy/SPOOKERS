@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp5wob6mpdx03"]
+
+[ext_resource type="PackedScene" uid="uid://2i3voopg46e6" path="res://Cars/Van4k/model.glb" id="1_3r2c2"]
+[ext_resource type="Texture2D" uid="uid://b2pby5061gbl" path="res://Cars/Van4k/RGB_983b78495cc74a5d8588f2e69da9cded_White_Van.png" id="2_1kjwr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xkwb"]
+albedo_texture = ExtResource("2_1kjwr")
+
+[node name="AuxScene" instance=ExtResource("1_3r2c2")]
+
+[node name="Node" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2865, 0, 0)
+
+[node name="object_0" parent="Node" index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_4xkwb")
+
+[node name="object_1" parent="Node" index="1"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+visible = false

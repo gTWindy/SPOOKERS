@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://drv3xxoqbovrl"]
+
+[ext_resource type="PackedScene" uid="uid://ttoea37gq426" path="res://Decorations/Trashbox/model.glb" id="1_dv6eh"]
+[ext_resource type="Texture2D" uid="uid://dvua2udd564eb" path="res://Decorations/Trashbox/RGB_41e3d5c9f0b24b5a8a7e9a22fe1e858f_Laundry_Basket.png" id="2_be0f3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vogn0"]
+albedo_texture = ExtResource("2_be0f3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ykrp"]
+size = Vector3(1, 1.24292, 1.13324)
+
+[node name="Trashbox" instance=ExtResource("1_dv6eh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.0554832, 0)
+
+[node name="object_0" parent="Node" index="0"]
+material_override = SubResource("StandardMaterial3D_vogn0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node/object_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/object_0/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999993, -1.1724e-13, 0, 1.1724e-13, 0.999993, 0, -0.00622547, 0.556205)
+shape = SubResource("BoxShape3D_8ykrp")

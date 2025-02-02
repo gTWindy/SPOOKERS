@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw3nonrvkrsu3"]
+
+[ext_resource type="PackedScene" uid="uid://c5d3oh4ey03i8" path="res://model.glb" id="1_alqgc"]
+[ext_resource type="Texture2D" uid="uid://co7ijwsumjuf4" path="res://c4562c61a4e6c7255093ee1c803c4a3d (1).jpg" id="2_en1vf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i27dj"]
+albedo_texture = ExtResource("2_en1vf")
+
+[node name="AuxScene" instance=ExtResource("1_alqgc")]
+
+[node name="object_0" parent="Node" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.33909, 0)
+material_override = SubResource("StandardMaterial3D_i27dj")

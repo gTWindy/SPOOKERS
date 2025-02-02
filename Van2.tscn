@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://beu3t2iqwcdo5"]
+
+[ext_resource type="PackedScene" uid="uid://brrjt5ledwumw" path="res://Cars/Van/model.glb" id="1_gmtop"]
+[ext_resource type="Texture2D" uid="uid://cm8y62o1ho7qr" path="res://Cars/Van/RGB_fa211dd2ce9c45f5891aed535a0b73f6_rv1.png" id="2_v3t5e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_khwsc"]
+albedo_texture = ExtResource("2_v3t5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcwfa"]
+albedo_texture = ExtResource("2_v3t5e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjdti"]
+size = Vector3(5.11157, 3.30267, 3.19318)
+
+[node name="Van2" instance=ExtResource("1_gmtop")]
+
+[node name="Node" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.80143, 0, 0)
+
+[node name="object_0" parent="Node" index="0"]
+material_override = SubResource("StandardMaterial3D_khwsc")
+
+[node name="object_1" parent="Node" index="1"]
+material_override = SubResource("StandardMaterial3D_wcwfa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node" index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/StaticBody3D" index="0"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, -3.90308, 0.0661316, 1.09659)
+shape = SubResource("BoxShape3D_rjdti")

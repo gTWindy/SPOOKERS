@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bds55y2cysdcp"]
+
+[ext_resource type="PackedScene" uid="uid://bxkc3rgepqind" path="res://Decorations/Homeless Box/model.glb" id="1_jnuje"]
+[ext_resource type="Texture2D" uid="uid://chc3mg7jqtlno" path="res://Decorations/Homeless Box/RGB_e67ba98efc6f4edbaf5e7766f265687e_homeless_bed_albedo.png" id="2_lo7r7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5taqh"]
+albedo_texture = ExtResource("2_lo7r7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_673dd"]
+size = Vector3(2.28687, 1.45398, 1.71045)
+
+[node name="AuxScene" instance=ExtResource("1_jnuje")]
+
+[node name="object_0" parent="Node" index="0"]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_5taqh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node/object_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/object_0/StaticBody3D" index="0"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -1.10474, 11.3495, -3.52783)
+shape = SubResource("BoxShape3D_673dd")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://h8iohattiu53"]
+
+[ext_resource type="PackedScene" uid="uid://bxloexsk6k5pr" path="res://Buildings/Skyscraper2/model.glb" id="1_rtdsn"]
+[ext_resource type="Texture2D" uid="uid://ddf6dqkerhcoq" path="res://Buildings/Skyscraper2/RGB_286be59f18064cadaac753e20bd2097c_h1_2_spec.png" id="2_5segi"]
+[ext_resource type="Texture2D" uid="uid://diblykif42wll" path="res://Buildings/Skyscraper2/RGB_aa79ad433d9944dfa7e3db10333d040d_H1_2.png" id="3_fcstf"]
+[ext_resource type="Texture2D" uid="uid://cg2mtvydgv8nv" path="res://Buildings/Skyscraper2/RGB_3a12ead28b404f88b032d1e3b7da418f_H1_3.png" id="4_7h4a4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8ru5"]
+albedo_texture = ExtResource("2_5segi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4u0u"]
+albedo_texture = ExtResource("3_fcstf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igf6q"]
+albedo_texture = ExtResource("4_7h4a4")
+
+[node name="AuxScene" instance=ExtResource("1_rtdsn")]
+
+[node name="Node" parent="." index="0"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="object_0" parent="Node" index="0"]
+material_override = SubResource("StandardMaterial3D_a8ru5")
+
+[node name="object_1" parent="Node" index="1"]
+material_override = SubResource("StandardMaterial3D_n4u0u")
+
+[node name="object_2" parent="Node" index="2"]
+material_override = SubResource("StandardMaterial3D_igf6q")
